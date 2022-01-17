@@ -6,24 +6,44 @@ import google from "./../../assets/images/google.png";
 const Login = () => {
   return (
     <div className="login">
-      <img src={logo} alt="" />
-      <p>Explore new courses... Hurry up!!</p>
-      <form>
-        <input placeholder="Email Address" type="text" name="" id="" />
-        <br />
-        <input placeholder="Password" type="password" name="" id="" />
-        <br />
-        <p>Forget Password?</p>
-        <button type="submit">Login</button>
-      </form>
-      <p>or</p>
-      <div>
-        <img src={fb} alt="" />
-        <img src={google} alt="" />
+      <img className="icon" src={logo} alt="" />
+      <p className="login-text">Explore new courses... Hurry up!!</p>
+      <div className="login-items">
+        <form>
+          <input
+            className="form-control"
+            placeholder="Email Address"
+            type="text"
+            name=""
+            id=""
+          />
+          <br />
+          <input
+            className="form-control"
+            placeholder="Password"
+            type="password"
+            name=""
+            id=""
+          />
+          <br />
+          <p className="fp-text">
+            <a href="/">Forget Password?</a>
+          </p>
+          <button className="login-btn" type="submit">
+            Login
+          </button>
+        </form>
+        <p className="or">
+          <span>or</span>
+        </p>
+        <div className="login-social">
+          <img src={fb} alt="" />
+          <img src={google} alt="" />
+        </div>
+        <p className="signup-text">
+          Dont have an account? <a href="/">Sign Up</a>
+        </p>
       </div>
-      <p>
-        Dont have an account? <a href="/">Sign Up</a>
-      </p>
     </div>
   );
 };
